@@ -13,7 +13,8 @@ export interface Game {
     name: string;
     background_image: string;
     // API code smell
-    parent_platforms: {platform: Platform}[]
+    parent_platforms: {platform: Platform}[];
+    metacritic: number;
 }
 
 interface FetchGamesResponse {
