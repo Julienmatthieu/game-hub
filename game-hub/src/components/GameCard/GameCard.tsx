@@ -13,14 +13,14 @@ const GameCard = ({ game }: Props) => {
     <Card>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
-        <Heading fontSize="2xl">{game.name}</Heading>
-        <HStack justifyContent="space-between">
+        <HStack marginBottom={2} justifyContent="space-between">
           <PlatformIconList
             // the mapping is from the API code smell
             platforms={game.parent_platforms.map((p) => p.platform)}
           ></PlatformIconList>
           <CriticScore score={game.metacritic}></CriticScore>
         </HStack>
+        <Heading fontSize="2xl">{game.name}</Heading>
       </CardBody>
     </Card>
   );
